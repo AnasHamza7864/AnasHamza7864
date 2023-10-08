@@ -1,10 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Blank White Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+        /* Base styles for both desktop and mobile */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Desktop-specific styles */
+        @media (min-width: 768px) {
+            body {
+                background-color: #ffffff; /* White background for desktop */
+            }
+            .container {
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 767px) {
+            body {
+                background-color: #f0f0f0; /* Light gray background for mobile */
+            }
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
-<body style="background-color: white;">
-<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<body>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
 <script>
   window.botpressWebChat.init({
       "composerPlaceholder": "Type here to chat",
@@ -19,6 +63,9 @@
       "frontendVersion": "v1"
   });
 </script>
-  });
-</script>
+    <div class="container">
+        <h1>Welcome to My Responsive Website</h1>
+        <p>This website has different interfaces for desktop and mobile devices.</p>
+    </div>
+</body>
 </html>
